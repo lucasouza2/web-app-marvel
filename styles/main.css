@@ -1,12 +1,11 @@
-html{
+html {
 	font-family: 'Ubuntu', sans-serif;
 }
-body{
-	background: url("bg.jpg");
-
+body {
+	background: url('../images/bg.jpg');
 }
 header {
-	background: #ED1A23;
+	background: #ed1a23;
 	padding: 20px 0;
 }
 
@@ -14,21 +13,16 @@ header {
 	position: relative;
 	width: 1080px;
 	margin: 1.5%;
-	
 }
 .fonthome {
 	font-size: 30px;
 	color: white;
 	position: relative;
 	margin: 0 auto;
-	
-	
-	
 }
 header ul {
 	position: relative;
 	display: flex;
-
 }
 
 .pesqui {
@@ -36,25 +30,17 @@ header ul {
 	width: 300px;
 	margin: 0 auto;
 	display: flex;
-	
-	
-
-	
 }
-.pesqui input{
+.pesqui input {
 	display: inline-block;
-	
 }
-.fas .fa-search .fa-2x{
+.fas .fa-search .fa-2x {
 	text-align: justify;
 }
-.fontbutton{
+.fontbutton {
 	font-size: 15px;
 	height: 39px;
-	
 }
-	
-
 
 nav {
 	position: absolute;
@@ -76,7 +62,7 @@ nav a {
 }
 
 nav a:hover {
-	color: #C78C19;
+	color: #c78c19;
 	text-decoration: underline;
 }
 
@@ -84,10 +70,9 @@ nav a:hover {
 	width: 100%;
 	margin: 0 auto;
 	padding: 50px 0px 0px 0px;
-	
 }
-.font{
-	color: #FFFFFF;
+.font {
+	color: #ffffff;
 }
 
 .produtos li {
@@ -98,16 +83,16 @@ nav a:hover {
 	margin: 1.5% 1.5%;
 	padding: 30px 20px;
 	box-sizing: border-box;
-	border: 2px solid #FFFFFF;
+	border: 2px solid #ffffff;
 	border-radius: 10px;
 }
 
 .produtos li:hover {
-	border-color: #C78C19;
+	border-color: #c78c19;
 }
 
 .produtos li:active {
-	border-color: #088C19;	
+	border-color: #088c19;
 }
 
 .produtos li:hover h2 {
@@ -115,38 +100,32 @@ nav a:hover {
 }
 
 .produtos h2 {
-	color: #FFFFFF;
+	color: #ffffff;
 	font-size: 30px;
 	font-weight: bold;
 }
 
 .produto-descricao {
-	color: #FFFFFF;
+	color: #ffffff;
 	font-size: 18px;
 }
 
-
-
 footer {
 	text-align: center;
-	background: url("bg.jpg");
+	background: url('../images/bg.jpg');
 	padding: 50px 0;
-	
 }
 
 .copyright {
-	color: #FFFFFF;
+	color: #ffffff;
 	font-size: 13px;
 	margin: 20px 0 0;
 }
 
 main {
-	background: url("bg.jpg");
-	
+	background: url('../images/bg.jpg');
 	margin: 0 auto;
-	
 }
-
 
 .input-padrao {
 	display: block;
@@ -154,6 +133,3 @@ main {
 	padding: 10px 25px;
 	width: 50%;
 }
-
-
-

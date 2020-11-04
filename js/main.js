@@ -1,14 +1,14 @@
 $(function () {
 	const apikey = 'apikey=57f92f2acc1aa8c873560a8e5f1648f0';
 	var baseUrl = `http://gateway.marvel.com/v1/public/`;
-	var text = ''
+	var text = '';
 	var offset = 0;
 	$('#btn').click(function () {
-		getCharacter("Tony")
+		getCharacter('Tony');
 	});
 
 	$('#scroll').click(function () {
-		get20Characters()
+		get20Characters();
 	});
 
 	function getCharacter(name) {
@@ -31,9 +31,9 @@ $(function () {
 			type: 'GET',
 			dataType: 'JSON',
 			success: function (result) {
-				let results = result.data.results
+				let results = result.data.results;
 				for (let i = 0; i < results.length; i++) {
-					createArticle(results[i].name)
+					createArticle(results[i].name);
 					// text += `${results[i].name} <br>`
 				}
 				// $('#results').html(text)
