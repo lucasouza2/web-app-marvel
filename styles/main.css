@@ -11,7 +11,7 @@ header {
 
 .caixa {
 	position: relative;
-	width: 1080px;
+	/* width: 1080px; */
 	margin: 1.5%;
 }
 .fonthome {
@@ -78,7 +78,12 @@ nav a:hover {
 .produtos li {
 	display: inline-block;
 	text-align: center;
-	width: 21%;
+	background-repeat: no-repeat;
+	/* background-attachment: fixed; */
+	background-position: center;
+	background-size: cover;
+	height: 200px;
+	/* width: 21%; */
 	vertical-align: top;
 	margin: 1.5% 1.5%;
 	padding: 30px 20px;
@@ -96,13 +101,14 @@ nav a:hover {
 }
 
 .produtos li:hover h2 {
-	font-size: 34px;
+	/* font-size: 34px; */
 }
 
 .produtos h2 {
 	color: #ffffff;
 	font-size: 30px;
 	font-weight: bold;
+	margin: 40px auto 0 auto;
 }
 
 .produto-descricao {
@@ -112,7 +118,7 @@ nav a:hover {
 
 footer {
 	text-align: center;
-	background: url('../images/bg.jpg');
+	/* background: url('../images/bg.jpg'); */
 	padding: 50px 0;
 }
 
