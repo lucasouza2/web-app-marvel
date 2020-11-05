@@ -100,9 +100,9 @@ nav a:hover {
 	border-color: #088c19;
 }
 
-.produtos li:hover h2 {
+/* .produtos li:hover h2 {
 	/* font-size: 34px; */
-}
+
 
 .produtos h2 {
 	color: #ffffff;
@@ -115,6 +115,56 @@ nav a:hover {
 	color: #ffffff;
 	font-size: 18px;
 }
+/*teste1*/
+
+.produtospesquisa {
+	width: 100%;
+	margin: 0 auto;
+	padding: 50px 0px 0px 0px;
+}
+
+
+.produtospesquisa li {
+	display:inline-block;
+	text-align: center;
+	background-repeat: no-repeat;
+	/* background-attachment: fixed; */
+	background-position: center;
+	background-size: cover;
+	height: 200px;
+	/* width: 21%; */
+	vertical-align: top;
+	margin: 1.5% 1.5%;
+	padding: 30px 20px;
+	box-sizing: border-box;
+	border: 2px solid #ffffff;
+	border-radius: 10px;
+}
+
+.produtospesquisa li:hover {
+	border-color: #c78c19;
+}
+
+.produtospesquisa li:active {
+	border-color: #088c19;
+}
+
+/* .produtospesquisa li:hover h2 {
+	/* font-size: 34px; */
+ 
+
+.produtospesquisa h2 {
+	color: #ffffff;
+	font-size: 30px;
+	font-weight: bold;
+	margin: 40px auto 0 auto;
+}
+
+.produto-descricao {
+	color: #ffffff;
+	font-size: 18px;
+}
+
 
 footer {
 	text-align: center;
@@ -140,8 +190,8 @@ main {
 	width: 50%;
 }
 
-@media screen and (max-width: 480px) {
-	.caixa, .principal{
+@media (min-width: 600px) {
+	 .caixa .principal{
 		width: auto;
 	}
 
@@ -152,6 +202,23 @@ main {
 	nav {
 		position: static;
 	}
+	nav li{
+		display: flex;
+	}
+	.produtospesquisa {
+        height: 600px;
+        width: 100%;
 
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+	} 
+	 
+	
+	.produtospesquisa li {
+		display: block;
+		background-color: #ed1a23;
+	}
 	
 }
