@@ -190,7 +190,7 @@ main {
 	width: 50%;
 }
 
-@media (min-width: 600px) {
+@media (max-width: 600px) {
 	 .caixa .principal{
 		width: auto;
 	}
@@ -205,20 +205,12 @@ main {
 	nav li{
 		display: flex;
 	}
-	.produtospesquisa {
-        height: 600px;
-        width: 100%;
-
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-evenly;
-	} 
+	
 	 
 	
 	.produtospesquisa li {
 		display: block;
-		background-color: #ed1a23;
+		
 	}
 	
 }
