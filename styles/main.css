@@ -139,3 +139,19 @@ main {
 	padding: 10px 25px;
 	width: 50%;
 }
+
+@media screen and (max-width: 480px) {
+	.caixa, .principal{
+		width: auto;
+	}
+
+	h1 {
+		text-align: center;
+	}
+
+	nav {
+		position: static;
+	}
+
+	
+}
