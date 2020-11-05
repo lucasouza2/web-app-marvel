@@ -21,14 +21,25 @@
 							<input type="pesquisa" id="inputName" class="input-padrao" required placeholder="personagem da marvel" />
 							<button class="fontbutton" id="pesquisa"><i class="fas fa-search fa-2x"></i></button>
 						</div>
-						<li><a href="index.html" class="fonthome">Home</a></li>
+						<li><a href="#" class="fonthome" id="home">Home</a></li>
 					</ul>
 				</nav>
 			</div>
 		</header>
 
 		<main>
-			<ul class="produtos" id="personagens"></ul>
+			<div class="listaPersonagens">
+				<div class="detalhesPersonagem">
+					<img
+						id="backgroundImage"
+						src="http://i.annihil.us/u/prod/marvel/i/mg/3/20/5232158de5b16/landscape_incredible.jpg"
+					/>
+					<h1>Nome do personagem</h1>
+				</div>
+				<ul class="todosPersonagens" id="todosPersonagens"></ul>
+				<ul class="pesquisaPersonagens" id="pesquisaPersonagens"></ul>
+				<img src="/images/loading.svg" alt="loading" class="loadingSvg" id="loadingSvg" />
+			</div>
 		</main>
 
 		<footer>

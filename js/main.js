@@ -1,25 +1,50 @@
 $(function () {
+	var win = $(window);
 	const apikey = 'apikey=57f92f2acc1aa8c873560a8e5f1648f0';
-	var baseUrl = `http://gateway.marvel.com/v1/public/`;
+	var baseUrl = `https://gateway.marvel.com/v1/public/`;
 	var offset = 0;
 
 	$(document).ready(function () {
-		get20Characters();
+		// $('.detalhesPersonagem').hide();
+		load20Characters();
+	});
+
+	$('#home').click(function () {
+		$('#todosPersonagens').show();
+		$('#pesquisaPersonagens').html('');
+	});
+
+	$('#inputName').on('keypress', function (e) {
+		if (e.which == 13) {
+			$('#pesquisa').click()
+		}
 	});
 
 	$('#pesquisa').click(function () {
 		var name = $('#inputName').val();
-		getCharacter(name);
+		if (name === '') {
+			return;
+		}
+		$('#todosPersonagens').hide();
+		$('#pesquisaPersonagens').html('');
+		findCharactersByName(name);
 	});
 
-	function getCharacter(name) {
+	$('#todosPersonagens').on('click', 'li', function (event) {
+		getCharacterByID(event.target.id)
+	});
+
+	$('#pesquisaPersonagens').on('click', 'li', function (event) {
+		getCharacterByID(event.target.id);
+	});
+
+	function getCharacterByID(id) {
 		$.ajax({
-			url: `${baseUrl}characters?nameStartsWith=${name}&${apikey}`,
+			url: `${baseUrl}characters/${id}?${apikey}`,
 			type: 'GET',
 			dataType: 'JSON',
 			success: function (result) {
-				var results = result.data.results;
-				addLI(results[0].name, results[0].thumbnail);
+				console.log(result);
 			},
 			error: function (error) {
 				console.log(`Error: ${error}`);
@@ -27,18 +52,35 @@ $(function () {
 		});
 	}
 
-	var win = $(window);
+	function findCharactersByName(name) {
+		$('#loadingSvg').show();
+		$.ajax({
+			url: `${baseUrl}characters?nameStartsWith=${name}&${apikey}`,
+			type: 'GET',
+			dataType: 'JSON',
+			success: function (result) {
+				var results = result.data.results;
+				for (let i = 0; i < results.length; i++) {
+					addLI('pesquisaPersonagens', results[i]);
+				}
+				$('#loadingSvg').hide();
+			},
+			error: function (error) {
+				console.log(`Error: ${error}`);
+			},
+		});
+	}
 
 	// Each time the user scrolls
 	win.scroll(function () {
 		// End of the document reached?
-		if ($(document).height() - win.height() == win.scrollTop()) {
-			// TODO: Adcionar loading gif
-			get20Characters()
+		if ($(document).height() - win.height() == win.scrollTop() && $('#todosPersonagens').is(':visible')) {
+			load20Characters();
 		}
 	});
 
-	function get20Characters() {
+	function load20Characters() {
+		$('#loadingSvg').show();
 		$.ajax({
 			url: `${baseUrl}characters?offset=${offset}&${apikey}`,
 			type: 'GET',
@@ -46,9 +88,10 @@ $(function () {
 			success: function (result) {
 				let results = result.data.results;
 				for (let i = 0; i < results.length; i++) {
-					addLI(results[i].name, results[i].thumbnail);
+					addLI('todosPersonagens', results[i]);
 				}
 				offset += 20;
+				$('#loadingSvg').hide();
 			},
 			error: function (error) {
 				console.log(`Error: ${error}`);
@@ -56,11 +99,11 @@ $(function () {
 		});
 	}
 
-	function addLI(name, backgroundimage) {
-		$('#personagens').append(
+	function addLI(div, personagem) {
+		$(`#${div}`).append(
 			$(
-				`<li style='background-image: url(${backgroundimage.path}/standard_fantastic.${backgroundimage.extension})'></li>`
-			).append($('<h2></h2>').text(name))
+				`<li id='${personagem.id}'style='background-image: url(${personagem.thumbnail.path}/standard_fantastic.${personagem.thumbnail.extension})'></li>`
+			).append($('<h2></h2>').text(personagem.name))
 		);
 	}
 });
