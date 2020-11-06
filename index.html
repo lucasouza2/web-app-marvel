@@ -29,16 +29,31 @@
 
 		<main>
 			<div class="listaPersonagens">
-				<div class="detalhesPersonagem">
-					<img
-						id="backgroundImage"
-						src="http://i.annihil.us/u/prod/marvel/i/mg/3/20/5232158de5b16/landscape_incredible.jpg"
-					/>
-					<h1>Nome do personagem</h1>
-				</div>
 				<ul class="todosPersonagens" id="todosPersonagens"></ul>
 				<ul class="pesquisaPersonagens" id="pesquisaPersonagens"></ul>
 				<img src="/images/loading.svg" alt="loading" class="loadingSvg" id="loadingSvg" />
+			</div>
+			<div class="detalhesPersonagem">
+				<img src="/images/loading.svg" alt="loading" class="loadingSvg" id="loadingSvg" />
+				<div class="background"></div>
+				<div class="titulo">
+					<h1 id="h1NomePersonagem"></h1>
+					<button id="detalhesFechar"><i class="fas fa-times-circle"></i></button>
+				</div>
+				<div class="detalhes">
+					<div class="series">
+						<h2>Séries</h2>
+						<ul id="listaSeries"></ul>
+					</div>
+					<div class="cocs">
+						<h2>Quadrinhos</h2>
+						<ul id="listaComics"></ul>
+					</div>
+					<div class="stories">
+						<h2>Histórias</h2>
+						<ul id="listaStories"></ul>
+					</div>
+				</div>
 			</div>
 		</main>
 

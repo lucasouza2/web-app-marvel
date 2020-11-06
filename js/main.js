@@ -5,7 +5,7 @@ $(function () {
 	var offset = 0;
 
 	$(document).ready(function () {
-		// $('.detalhesPersonagem').hide();
+		$('.detalhesPersonagem').hide();
 		load20Characters();
 	});
 
@@ -16,8 +16,13 @@ $(function () {
 
 	$('#inputName').on('keypress', function (e) {
 		if (e.which == 13) {
-			$('#pesquisa').click()
+			$('#pesquisa').click();
 		}
+	});
+
+	$('#detalhesFechar').click(function () {
+		$('.detalhesPersonagem').hide();
+		limparDiv()
 	});
 
 	$('#pesquisa').click(function () {
@@ -31,7 +36,7 @@ $(function () {
 	});
 
 	$('#todosPersonagens').on('click', 'li', function (event) {
-		getCharacterByID(event.target.id)
+		getCharacterByID(event.target.id);
 	});
 
 	$('#pesquisaPersonagens').on('click', 'li', function (event) {
@@ -44,10 +49,14 @@ $(function () {
 			type: 'GET',
 			dataType: 'JSON',
 			success: function (result) {
-				console.log(result);
+				$('.detalhesPersonagem').show();
+				$('.detalhesPersonagem .loadingSvg').show();
+				construirDivDetalhes(result.data.results[0]);
+				$('.detalhesPersonagem .loadingSvg').hide();
 			},
 			error: function (error) {
-				console.log(`Error: ${error}`);
+				console.log(id);
+				console.log(`Error: ${JSON.stringify(error)}`);
 			},
 		});
 	}
@@ -103,7 +112,51 @@ $(function () {
 		$(`#${div}`).append(
 			$(
 				`<li id='${personagem.id}'style='background-image: url(${personagem.thumbnail.path}/standard_fantastic.${personagem.thumbnail.extension})'></li>`
-			).append($('<h2></h2>').text(personagem.name))
+			).append($(`<h2 id='${personagem.id}'></h2>`).text(personagem.name))
 		);
+	}
+
+	function construirDivDetalhes(personagem) {
+		limparDiv();
+		$('.background').append(
+			$(`<img
+						id="backgroundImage"
+						src="${personagem.thumbnail.path}/portrait_incredible.${personagem.thumbnail.extension}"
+					/>`)
+		);
+		$('#h1NomePersonagem').text(personagem.name);
+		let series = personagem.series.items;
+		let seriesCount = personagem.series.available;
+		let comics = personagem.comics.items;
+		let comicsCount = personagem.comics.available;
+		let stories = personagem.stories.items;
+		let storiesCount = personagem.stories.available;
+		for (let i = 0; i < series.length; i++) {
+			$('#listaSeries').append($(`<li></li>`).append(series[i].name));
+		}
+		if (seriesCount > 20) {
+			$('#listaSeries').append($(`<li></li>`).append(`...`));
+		}
+
+		for (let i = 0; i < comics.length; i++) {
+			$('#listaComics').append($(`<li></li>`).append(comics[i].name));
+		}
+		if (comicsCount > 20) {
+			$('#listaComics').append($(`<li></li>`).append(`...`));
+		}
+
+		for (let i = 0; i < stories.length; i++) {
+			$('#listaStories').append($(`<li></li>`).append(stories[i].name));
+		}
+		if (storiesCount > 20) {
+			$('#listaStories').append($(`<li></li>`).append(`...`));
+		}
+	}
+
+	function limparDiv() {
+		$('#listaSeries').html('');
+		$('#listaComics').html('');
+		$('#listaStories').html('');
+		$('.background').html('');
 	}
 });

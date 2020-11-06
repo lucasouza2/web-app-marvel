@@ -118,15 +118,80 @@ nav a:hover {
 }
 
 .detalhesPersonagem {
+	text-align: center;
 	position: fixed;
-    background-color: gainsboro;
-    width: 800px;
-    height: fit-content;
-    top: 20%;
-    right: 30%;
-    justify-content: center;
-    display: flex;
-	
+	background-color: gainsboro;
+	width: 1300px;
+    height: 700px;
+    top: 10%;
+    right: 15%;
+	justify-content: center;
+	display: block;
+	flex-direction: column;
+	overflow: auto;
+	color: white;
+	font-size: 25px;
+	border: 2px solid;
+	border-radius: 10px;
+	background-image: url(/images/bg.jpg);
+}
+
+.detalhes div {
+	display: block;
+	text-align: center;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	height: fit-content;
+	margin: 1.5% 1.5%;
+	box-sizing: border-box;
+	border: 2px solid red;
+	border-radius: 10px;
+	padding: 0 40px 0 40px;
+}
+
+.detalhesPersonagem img {
+	display: block;
+	margin: auto;
+}
+
+.detalhesPersonagem h1 {
+	font-size: larger;
+	font-weight: bold;
+	display: inline-block;
+}
+
+.detalhesPersonagem h2 {
+	font-weight: bold;
+	padding: 20px 0 20px;
+}
+
+.detalhesPersonagem button {
+	width: 50px;
+	height: 30px;
+    position: absolute;
+    right: 1%;
+}
+
+.detalhesPersonagem button i {
+	font-size: 20px;
+}
+
+.detalhes {
+	display: flex;
+}
+
+.detalhes div li {
+	list-style-type: disc;
+}
+
+.detalhes div {
+	margin: 20px 20px 0 20px;
+}
+
+.titulo {
+	text-align: center;
+	margin: 20px 0 20px 0;
 }
 
 
