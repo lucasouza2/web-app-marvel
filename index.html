@@ -1,15 +1,67 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<meta charset='utf-8'>
-	<meta http-equiv='X-UA-Compatible' content='IE=edge'>
-	<title>Marvel</title>
-	<meta name='viewport' content='width=device-width, initial-scale=1'>
-	<link rel='stylesheet' type='text/css' media='screen' href='styles/main.css'>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-	<script src='js/main.js'></script>
-</head>
-<body>
-	
-</body>
+	<head>
+		<meta charset="UTF-8" />
+		<title>marvel</title>
+		<meta name="viewport" content="width=device-width" />
+		<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet" />
+		<script src="https://kit.fontawesome.com/371b9d23e7.js" crossorigin="anonymous"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="/js/main.js"></script>
+		<link rel="stylesheet" href="/styles/reset.css" />
+		<link rel="stylesheet" href="/styles/main.css" />
+	</head>
+	<body>
+		<header>
+			<div class="caixa">
+				<h1><img src="images/marvel-logo-header.jpg" /></h1>
+
+				<nav>
+					<ul>
+						<div class="pesqui">
+							<input type="pesquisa" id="inputName" class="input-padrao" required placeholder="personagem da marvel" />
+							<button class="fontbutton" id="pesquisa"><i class="fas fa-search fa-2x"></i></button>
+						</div>
+						<li><a href="#" class="fonthome" id="home">Home</a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+
+		<main>
+			<div class="listaPersonagens">
+				<ul class="todosPersonagens" id="todosPersonagens"></ul>
+				<ul class="pesquisaPersonagens" id="pesquisaPersonagens"></ul>
+				<img src="/images/loading.svg" alt="loading" class="loadingSvg" id="loadingSvg" />
+			</div>
+			<div class="detalhesPersonagem">
+				<img src="/images/loading.svg" alt="loading" class="loadingSvg" id="loadingSvg" />
+				<div class="background">
+					<button id="detalhesFechar"><i class="fas fa-times-circle"></i></button>
+				</div>
+				<div class="titulo">
+					<h1 id="h1NomePersonagem"></h1>
+				</div>
+				<div class="detalhes">
+					<div class="series">
+						<h2>Séries</h2>
+						<ul id="listaSeries"></ul>
+					</div>
+					<div class="comics">
+						<h2>Quadrinhos</h2>
+						<ul id="listaComics"></ul>
+					</div>
+					<div class="stories">
+						<h2>Histórias</h2>
+						<ul id="listaStories"></ul>
+					</div>
+				</div>
+			</div>
+		</main>
+
+		<footer>
+			<img src="images/logobrancomarvel.png" />
+			<p class="copyright">&copy; Copyright Marvel-app-web - 2020</p>
+		</footer>
+	</body>
 </html>

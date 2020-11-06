@@ -1,0 +1,289 @@
+html {
+	font-family: 'Ubuntu', sans-serif;
+}
+
+body {
+	background: url('../images/bg.jpg');
+}
+
+header {
+	background: #ed1a23;
+	padding: 20px 0;
+}
+
+.caixa {
+	position: relative;
+	margin: 1.5%;
+}
+
+.fonthome {
+	font-size: 30px;
+	color: white;
+	position: relative;
+	margin: 0 auto;
+}
+
+header ul {
+	position: relative;
+	display: flex;
+}
+
+.pesqui {
+	position: relative;
+	width: 300px;
+	margin: 0 auto;
+	display: flex;
+}
+
+.pesqui input {
+	display: inline-block;
+}
+
+.fas .fa-search .fa-2x {
+	text-align: justify;
+}
+
+.fontbutton {
+	font-size: 15px;
+	height: 39px;
+}
+
+nav {
+	position: absolute;
+	top: 80px;
+	right: 0;
+}
+
+nav li {
+	display: inline;
+	margin: 0 0 15px 15px;
+}
+
+nav a {
+	text-transform: uppercase;
+	color: #000000;
+	font-weight: bold;
+	font-size: 22px;
+	text-decoration: none;
+}
+
+nav a:hover {
+	color: #c78c19;
+	text-decoration: underline;
+}
+
+.listaPersonagens {
+	position: relative;
+	width: 100%;
+	margin: 0 auto;
+	padding: 50px 0px 0px 0px;
+}
+
+.font {
+	color: #ffffff;
+}
+
+.listaPersonagens li {
+	display: inline-block;
+	text-align: center;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	height: 200px;
+	vertical-align: top;
+	margin: 1.5% 1.5%;
+	padding: 30px 20px;
+	box-sizing: border-box;
+	border: 2px solid #ffffff;
+	border-radius: 10px;
+}
+
+.listaPersonagens li:hover {
+	border-color: #c78c19;
+}
+
+.listaPersonagens li:active {
+	border-color: #088c19;
+}
+
+.listaPersonagens h2 {
+	color: #ffffff;
+	font-size: 30px;
+	font-weight: bold;
+	margin: 50px auto 0 auto;
+}
+
+.loadingSvg {
+	margin: 0 0 0 45%;
+}
+
+.detalhesPersonagem {
+	text-align: center;
+	position: fixed;
+	background-color: gainsboro;
+	width: 1300px;
+	height: 700px;
+	top: 10%;
+	right: 15%;
+	justify-content: center;
+	display: block;
+	flex-direction: column;
+	overflow: auto;
+	color: white;
+	font-size: 25px;
+	border: 2px solid;
+	border-radius: 10px;
+	background-image: url(/images/bg.jpg);
+}
+
+.detalhes div {
+	display: block;
+	text-align: center;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	height: fit-content;
+	margin: 1.5% 1.5%;
+	box-sizing: border-box;
+	border: 2px solid red;
+	border-radius: 10px;
+	padding: 0 40px 0 40px;
+}
+
+.detalhesPersonagem img {
+	display: block;
+	margin: auto;
+}
+
+.detalhesPersonagem h1 {
+	font-size: larger;
+	font-weight: bold;
+	display: inline-block;
+}
+
+.detalhesPersonagem h2 {
+	font-weight: bold;
+	padding: 20px 0 20px;
+}
+
+.detalhesPersonagem button {
+	width: 50px;
+	height: 30px;
+	position: absolute;
+	right: 1%;
+}
+
+.detalhesPersonagem button i {
+	font-size: 20px;
+}
+
+.detalhes {
+	display: flex;
+}
+
+.detalhes div li {
+	list-style-type: disc;
+}
+
+.detalhes div {
+	margin: 20px 20px 0 20px;
+}
+
+.produtospesquisa {
+	width: 100%;
+	margin: 0 auto;
+	padding: 50px 0px 0px 0px;
+}
+
+.produtospesquisa li {
+	display: inline-block;
+	text-align: center;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	height: 200px;
+	vertical-align: top;
+	margin: 1.5% 1.5%;
+	padding: 30px 20px;
+	box-sizing: border-box;
+	border: 2px solid #ffffff;
+	border-radius: 10px;
+}
+
+.produtospesquisa li:hover {
+	border-color: #c78c19;
+}
+
+.produtospesquisa li:active {
+	border-color: #088c19;
+}
+
+.produtospesquisa h2 {
+	color: #ffffff;
+	font-size: 30px;
+	font-weight: bold;
+	margin: 40px auto 0 auto;
+}
+
+.produto-descricao {
+	color: #ffffff;
+	font-size: 18px;
+}
+
+.titulo {
+	text-align: center;
+	margin: 20px 0 20px 0;
+}
+
+footer {
+	text-align: center;
+	padding: 50px 0;
+}
+
+.copyright {
+	color: #ffffff;
+	font-size: 13px;
+	margin: 20px 0 0;
+}
+
+main {
+	background: url('../images/bg.jpg');
+	margin: 0 auto;
+}
+
+.input-padrao {
+	display: block;
+	margin: 0 0 20px;
+	padding: 10px 25px;
+	width: 50%;
+}
+
+@media (max-width: 600px) {
+	.caixa .principal {
+		width: auto;
+	}
+
+	h1 {
+		text-align: center;
+	}
+
+	nav {
+		position: static;
+	}
+	nav li {
+		display: flex;
+	}
+
+	.produtospesquisa li {
+		display: block;
+	}
+
+	.detalhesPersonagem {
+		width: 70%;
+		right: 10%;
+	}
+
+	.detalhes {
+		display: block;
+	}
+}
