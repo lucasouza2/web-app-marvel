@@ -22,7 +22,7 @@ $(function () {
 
 	$('#detalhesFechar').click(function () {
 		$('.detalhesPersonagem').hide();
-		limparDiv()
+		limparDiv();
 	});
 
 	$('#pesquisa').click(function () {
@@ -157,6 +157,6 @@ $(function () {
 		$('#listaSeries').html('');
 		$('#listaComics').html('');
 		$('#listaStories').html('');
-		$('.background').html('');
+		$('.background #backgroundImage').attr('src', '');
 	}
 });

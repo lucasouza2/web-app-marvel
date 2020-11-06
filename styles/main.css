@@ -1,9 +1,11 @@
 html {
 	font-family: 'Ubuntu', sans-serif;
 }
+
 body {
 	background: url('../images/bg.jpg');
 }
+
 header {
 	background: #ed1a23;
 	padding: 20px 0;
@@ -11,15 +13,16 @@ header {
 
 .caixa {
 	position: relative;
-	/* width: 1080px; */
 	margin: 1.5%;
 }
+
 .fonthome {
 	font-size: 30px;
 	color: white;
 	position: relative;
 	margin: 0 auto;
 }
+
 header ul {
 	position: relative;
 	display: flex;
@@ -31,12 +34,15 @@ header ul {
 	margin: 0 auto;
 	display: flex;
 }
+
 .pesqui input {
 	display: inline-block;
 }
+
 .fas .fa-search .fa-2x {
 	text-align: justify;
 }
+
 .fontbutton {
 	font-size: 15px;
 	height: 39px;
@@ -72,6 +78,7 @@ nav a:hover {
 	margin: 0 auto;
 	padding: 50px 0px 0px 0px;
 }
+
 .font {
 	color: #ffffff;
 }
@@ -80,11 +87,9 @@ nav a:hover {
 	display: inline-block;
 	text-align: center;
 	background-repeat: no-repeat;
-	/* background-attachment: fixed; */
 	background-position: center;
 	background-size: cover;
 	height: 200px;
-	/* width: 21%; */
 	vertical-align: top;
 	margin: 1.5% 1.5%;
 	padding: 30px 20px;
@@ -101,13 +106,8 @@ nav a:hover {
 	border-color: #088c19;
 }
 
-/* .produtos li:hover h2 {
-	/* font-size: 34px; */
-
-
 .listaPersonagens h2 {
 	color: #ffffff;
-	/* -webkit-text-stroke: 0.1px black; */
 	font-size: 30px;
 	font-weight: bold;
 	margin: 50px auto 0 auto;
@@ -122,9 +122,9 @@ nav a:hover {
 	position: fixed;
 	background-color: gainsboro;
 	width: 1300px;
-    height: 700px;
-    top: 10%;
-    right: 15%;
+	height: 700px;
+	top: 10%;
+	right: 15%;
 	justify-content: center;
 	display: block;
 	flex-direction: column;
@@ -169,8 +169,8 @@ nav a:hover {
 .detalhesPersonagem button {
 	width: 50px;
 	height: 30px;
-    position: absolute;
-    right: 1%;
+	position: absolute;
+	right: 1%;
 }
 
 .detalhesPersonagem button i {
@@ -188,7 +188,6 @@ nav a:hover {
 .detalhes div {
 	margin: 20px 20px 0 20px;
 }
-/*teste1*/
 
 .produtospesquisa {
 	width: 100%;
@@ -196,16 +195,13 @@ nav a:hover {
 	padding: 50px 0px 0px 0px;
 }
 
-
 .produtospesquisa li {
-	display:inline-block;
+	display: inline-block;
 	text-align: center;
 	background-repeat: no-repeat;
-	/* background-attachment: fixed; */
 	background-position: center;
 	background-size: cover;
 	height: 200px;
-	/* width: 21%; */
 	vertical-align: top;
 	margin: 1.5% 1.5%;
 	padding: 30px 20px;
@@ -222,10 +218,6 @@ nav a:hover {
 	border-color: #088c19;
 }
 
-/* .produtospesquisa li:hover h2 {
-	/* font-size: 34px; */
- 
-
 .produtospesquisa h2 {
 	color: #ffffff;
 	font-size: 30px;
@@ -238,16 +230,13 @@ nav a:hover {
 	font-size: 18px;
 }
 
-
 .titulo {
 	text-align: center;
 	margin: 20px 0 20px 0;
 }
 
-
 footer {
 	text-align: center;
-	/* background: url('../images/bg.jpg'); */
 	padding: 50px 0;
 }
 
@@ -270,7 +259,7 @@ main {
 }
 
 @media (max-width: 600px) {
-	 .caixa .principal{
+	.caixa .principal {
 		width: auto;
 	}
 
@@ -281,15 +270,20 @@ main {
 	nav {
 		position: static;
 	}
-	nav li{
+	nav li {
 		display: flex;
 	}
-	
-	 
-	
+
 	.produtospesquisa li {
 		display: block;
-		
 	}
-	
+
+	.detalhesPersonagem {
+		width: 70%;
+		right: 10%;
+	}
+
+	.detalhes {
+		display: block;
+	}
 }
