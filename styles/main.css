@@ -101,9 +101,9 @@ nav a:hover {
 	border-color: #088c19;
 }
 
-.listaPersonagens li:hover h2 {
+/* .produtos li:hover h2 {
 	/* font-size: 34px; */
-}
+
 
 .listaPersonagens h2 {
 	color: #ffffff;
@@ -188,6 +188,56 @@ nav a:hover {
 .detalhes div {
 	margin: 20px 20px 0 20px;
 }
+/*teste1*/
+
+.produtospesquisa {
+	width: 100%;
+	margin: 0 auto;
+	padding: 50px 0px 0px 0px;
+}
+
+
+.produtospesquisa li {
+	display:inline-block;
+	text-align: center;
+	background-repeat: no-repeat;
+	/* background-attachment: fixed; */
+	background-position: center;
+	background-size: cover;
+	height: 200px;
+	/* width: 21%; */
+	vertical-align: top;
+	margin: 1.5% 1.5%;
+	padding: 30px 20px;
+	box-sizing: border-box;
+	border: 2px solid #ffffff;
+	border-radius: 10px;
+}
+
+.produtospesquisa li:hover {
+	border-color: #c78c19;
+}
+
+.produtospesquisa li:active {
+	border-color: #088c19;
+}
+
+/* .produtospesquisa li:hover h2 {
+	/* font-size: 34px; */
+ 
+
+.produtospesquisa h2 {
+	color: #ffffff;
+	font-size: 30px;
+	font-weight: bold;
+	margin: 40px auto 0 auto;
+}
+
+.produto-descricao {
+	color: #ffffff;
+	font-size: 18px;
+}
+
 
 .titulo {
 	text-align: center;
@@ -217,4 +267,29 @@ main {
 	margin: 0 0 20px;
 	padding: 10px 25px;
 	width: 50%;
+}
+
+@media (max-width: 600px) {
+	 .caixa .principal{
+		width: auto;
+	}
+
+	h1 {
+		text-align: center;
+	}
+
+	nav {
+		position: static;
+	}
+	nav li{
+		display: flex;
+	}
+	
+	 
+	
+	.produtospesquisa li {
+		display: block;
+		
+	}
+	
 }
