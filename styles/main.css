@@ -87,6 +87,12 @@ nav a:hover {
 	
 }
 
+.pesquisaPersonagens {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	
+}
 
 .font {
 	color: #ffffff;
