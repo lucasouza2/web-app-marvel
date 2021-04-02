@@ -14,6 +14,10 @@ $(function () {
 		$('#pesquisaPersonagens').html('');
 	});
 
+	$('#perfil').click(function () {
+		win.location.href = 'login.html'
+	})
+
 	$('#inputName').on('keypress', function (e) {
 		if (e.which == 13) {
 			$('#pesquisa').click();
