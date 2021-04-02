@@ -37,6 +37,9 @@ header ul {
 
 .pesqui input {
 	display: inline-block;
+	border-style: none;
+    outline: none;
+    border-radius: 6px;
 }
 
 .fas .fa-search .fa-2x {
@@ -45,7 +48,11 @@ header ul {
 
 .fontbutton {
 	font-size: 15px;
-	height: 39px;
+	background-color: #fff;
+    border-style: none;
+    height: 35px;
+    border-radius: 6px;
+    margin-left: -8px;
 }
 
 nav {
@@ -72,39 +79,34 @@ nav a:hover {
 	text-decoration: underline;
 }
 
-.listaPersonagens {
-	position: relative;
-	width: 100%;
-	margin: 0 auto;
-	padding: 50px 0px 0px 0px;
+
+.todosPersonagens {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	
 }
+
 
 .font {
 	color: #ffffff;
 }
 
 .listaPersonagens li {
-	display: inline-block;
+	display: flex;
 	text-align: center;
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
-	height: 200px;
-	vertical-align: top;
 	margin: 1.5% 1.5%;
-	padding: 30px 20px;
+	padding: 20px 20px;
 	box-sizing: border-box;
 	border: 2px solid #ffffff;
 	border-radius: 10px;
+	width: 18%;
 }
 
-.listaPersonagens li:hover {
-	border-color: #c78c19;
-}
 
-.listaPersonagens li:active {
-	border-color: #088c19;
-}
 
 .listaPersonagens h2 {
 	color: #ffffff;
@@ -118,23 +120,28 @@ nav a:hover {
 }
 
 .detalhesPersonagem {
-	text-align: center;
-	position: fixed;
-	background-color: gainsboro;
-	width: 1300px;
-	height: 700px;
-	top: 10%;
-	right: 15%;
-	justify-content: center;
 	display: block;
+	overflow: scroll;
+	position: fixed;
+	top: 0px;
+	text-align: center;
+	background-color: gainsboro;
+	width: 80vw;
+	height: 80vh; 
+	left: 50%;
+	transform: translateX(-50%) translateY(-50%);
+	top: 50%;
+	padding: 20px;
+	justify-content: center;
 	flex-direction: column;
-	overflow: auto;
 	color: white;
 	font-size: 25px;
 	border: 2px solid;
 	border-radius: 10px;
 	background-image: url(/images/bg.jpg);
 }
+
+
 
 .detalhes div {
 	display: block;
@@ -247,8 +254,9 @@ footer {
 }
 
 main {
+	display: flex;
 	background: url('../images/bg.jpg');
-	margin: 0 auto;
+	
 }
 
 .input-padrao {
@@ -276,11 +284,6 @@ main {
 
 	.produtospesquisa li {
 		display: block;
-	}
-
-	.detalhesPersonagem {
-		width: 70%;
-		right: 10%;
 	}
 
 	.detalhes {
