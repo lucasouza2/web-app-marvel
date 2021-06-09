@@ -19,12 +19,22 @@
 		<main>
 			<div class="login">
 				<label for="email">Email</label>
-				<input type="email" id="email" class="input-padrao" required placeholder="seuemail@dominio.com">
+				<input type="email" id="email" class="input-padrao" required placeholder="seuemail@dominio.com" />
+				<div class="validate" id="validate_email"></div>
+
 				<label for="senha">Senha</label>
-				<input type="senha" id="senha" class="input-padrao" required placeholder="Digite sua senha">
-				<div class="butao">
-					<button id="submit" type="submit">login</button>
+				<input type="password" id="senha" class="input-padrao" required placeholder="Digite sua senha" />
+				<div class="validate" id="validate_senha"></div>
+
+				<div class="botoes">
+					<div class="botao">
+						<button id="cadastrar" type="submit">Cadastrar</button>
+					</div>
+					<div class="botao">
+						<button id="login" type="submit">Login</button>
+					</div>
 				</div>
+				<div class="validate" id="validate_form"></div>
 			</div>
 		</main>
 

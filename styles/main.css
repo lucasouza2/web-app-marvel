@@ -38,8 +38,8 @@ header ul {
 .pesqui input {
 	display: inline-block;
 	border-style: none;
-    outline: none;
-    border-radius: 6px;
+	outline: none;
+	border-radius: 6px;
 }
 
 .fas .fa-search .fa-2x {
@@ -49,10 +49,10 @@ header ul {
 .fontbutton {
 	font-size: 15px;
 	background-color: #fff;
-    border-style: none;
-    height: 35px;
-    border-radius: 6px;
-    margin-left: -8px;
+	border-style: none;
+	height: 35px;
+	border-radius: 6px;
+	margin-left: -8px;
 }
 
 nav {
@@ -79,19 +79,16 @@ nav a:hover {
 	text-decoration: underline;
 }
 
-
 .todosPersonagens {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
-	
 }
 
 .pesquisaPersonagens {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
-	
 }
 
 .font {
@@ -112,8 +109,6 @@ nav a:hover {
 	width: 18%;
 }
 
-
-
 .listaPersonagens h2 {
 	color: #ffffff;
 	font-size: 30px;
@@ -133,7 +128,7 @@ nav a:hover {
 	text-align: center;
 	background-color: gainsboro;
 	width: 80vw;
-	height: 80vh; 
+	height: 80vh;
 	left: 50%;
 	transform: translateX(-50%) translateY(-50%);
 	top: 50%;
@@ -146,8 +141,6 @@ nav a:hover {
 	border-radius: 10px;
 	background-image: url(/images/bg.jpg);
 }
-
-
 
 .detalhes div {
 	display: block;
@@ -180,14 +173,18 @@ nav a:hover {
 }
 
 .detalhesPersonagem button {
-	width: 50px;
+	width: fit-content;
 	height: 30px;
-	position: absolute;
 	right: 1%;
 }
 
 .detalhesPersonagem button i {
 	font-size: 20px;
+}
+
+.background {
+	display: flex;
+	flex-direction: column;
 }
 
 .detalhes {
@@ -262,7 +259,6 @@ footer {
 main {
 	display: flex;
 	background: url('../images/bg.jpg');
-	
 }
 
 .input-padrao {

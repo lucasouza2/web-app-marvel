@@ -3,8 +3,10 @@ $(function () {
 	const apikey = 'apikey=57f92f2acc1aa8c873560a8e5f1648f0';
 	var baseUrl = `https://gateway.marvel.com/v1/public/`;
 	var offset = 0;
+	var logado = false;
 
 	$(document).ready(function () {
+		checkForSession();
 		$('.detalhesPersonagem').hide();
 		load20Characters();
 	});
@@ -15,7 +17,7 @@ $(function () {
 	});
 
 	$('#perfil').click(function () {
-		location.href = 'login.html';
+		location.href = logado ? 'perfil.html' : 'login.html';
 	});
 
 	$('#inputName').on('keypress', function (e) {
@@ -25,8 +27,13 @@ $(function () {
 	});
 
 	$('#detalhesFechar').click(function () {
+		console.log("hello");
 		$('.detalhesPersonagem').hide();
 		limparDiv();
+	});
+
+	$('#detalhesFechar').click(function () {
+		favoritarPersonagem()
 	});
 
 	$('#pesquisa').click(function () {
@@ -162,5 +169,21 @@ $(function () {
 		$('#listaComics').html('');
 		$('#listaStories').html('');
 		$('.background #backgroundImage').attr('src', '');
+	}
+
+	function checkForSession() {
+		var token = localStorage.getItem('token');
+		var result = $.ajax({
+			url: `http://localhost:3000/session`,
+			type: 'GET',
+			dataType: 'JSON',
+			data: { sid: token },
+		}).always(function name() {
+			if (result['status'] != 200) {
+				$('#perfil').text('Fazer login');
+			} else {
+				logado = true;
+			}
+		});
 	}
 });

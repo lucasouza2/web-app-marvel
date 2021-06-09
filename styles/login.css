@@ -5,66 +5,71 @@ html {
 body {
 	background: url('../images/bg.jpg');
 }
+
 header {
-    display: flex;
+	display: flex;
 	justify-content: center;
-    align-items: center;
-    bottom: 0;
-    padding-bottom: 10px;
-    flex-direction: column;
+	align-items: center;
+	bottom: 0;
+	padding-bottom: 10px;
+	flex-direction: column;
 	background: #ed1a23;
 	padding: 1px 0;
 }
 
 main {
-    display: flex;
-    justify-content: center;
-    margin-top: 50px;
-    padding: 10vh;
-}
-.butao {   
-    padding: 5%; 
-    
-}
-button{
-    height: 60px;
-    width: 60px;
+	display: flex;
+	justify-content: center;
+	margin-top: 50px;
+	padding: 10vh;
 }
 
+.botao {
+	padding: 5%;
+}
+
+button {
+	height: 30px;
+	width: flex;
+}
 
 .login {
-    display: flex;
+	display: flex;
 	text-align: center;
 	margin: 1.5% 1.5%;
 	box-sizing: border-box;
 	border: 2px solid #ffffff;
 	border-radius: 10px;
 	width: 50%;
-    padding: 20px 10px 20px 10px;
-    color: #ffffff;
-    flex-direction: column;
-
-}
-label{
-    padding-top: 10px;
+	padding: 20px 10px 20px 10px;
+	color: #ffffff;
+	flex-direction: column;
 }
 
+.botoes {
+	display: flex;
+	justify-content: space-between;
+	flex-direction: row;
+}
 
+label {
+	padding-top: 10px;
+}
 
-
-
-
-
-
+.validate {
+	color: #ed1a23;
+    font-weight: bold;
+}
 
 footer {
-    display: flex;
+	display: flex;
 	justify-content: center;
-    align-items: center;
-    bottom: 0;
-    padding-bottom: 10px;
-    flex-direction: column;
+	align-items: center;
+	bottom: 0;
+	padding-bottom: 10px;
+	flex-direction: column;
 }
+
 .copyright {
 	color: #ffffff;
 	font-size: 13px;
