@@ -56,6 +56,7 @@ $(function () {
 				return $('#validate_form').text('E-mail não existe!').show().fadeOut(4000);
 			}
 		});
+
 		var login = $.ajax({
 			url: `http://localhost:3000/login`,
 			type: 'POST',
@@ -64,10 +65,19 @@ $(function () {
 		}).always(function name() {
 			if (login['status'] == 401) {
 				return $('#validate_form').text('E-mail ou senha errados!').show().fadeOut(4000);
-			} else if (login['status'] == 202 || login['status'] == 304) {
-				localStorage.setItem('token', login['responseJSON']['token']);
-				localStorage.setItem('email', email);
-				return location.href = 'index.html';
+			} else if (login['status'] == 202) {
+				var result = $.ajax({
+					url: `http://localhost:3000/token`,
+					type: 'GET',
+					dataType: 'JSON',
+					data: { email: email },
+				}).always(function name() {
+					if (result['status'] == 202) {
+						localStorage.setItem('token', result['responseJSON']['token']);
+						localStorage.setItem('email', email);
+						return (location.href = 'index.html');
+					}
+				});
 			}
 		});
 	}

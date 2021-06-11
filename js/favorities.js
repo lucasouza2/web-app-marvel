@@ -19,16 +19,11 @@ $(function () {
 			data: { user_id: user },
 			success: function (result) {
 				for (let i = 0; i < result.length; i++) {
-					var character = getCharacterByID(result[i]['hero_id']);
-					console.log(character);
-					addLI('todosPersonagens', character);
+					getCharacterByID(result[i]['hero_id']);
 				}
-				$('#loadingSvg').hide();
-			},
-			error: function (error) {
-				console.log(error);
 			},
 		});
+		$('#loadingSvg').hide();
 	}
 
 	function addLI(div, personagem) {
@@ -40,12 +35,12 @@ $(function () {
 	}
 
 	function getCharacterByID(id) {
-		return $.ajax({
+		$.ajax({
 			url: `${baseUrl}characters/${id}?offset=${offset}&${apikey}`,
 			type: 'GET',
 			dataType: 'JSON',
 			success: function (result) {
-				console.log(result);
+				addLI('todosPersonagens', result.data.results[0]);
 			},
 		});
 	}
@@ -59,7 +54,6 @@ $(function () {
 			data: { sid: token },
 		}).always(function name() {
 			if (result['status'] != 200) {
-				console.log('that');
 				$('#perfil').text('Fazer login');
 			} else {
 				logado = true;

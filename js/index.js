@@ -27,13 +27,12 @@ $(function () {
 	});
 
 	$('#detalhesFechar').click(function () {
-		console.log("hello");
 		$('.detalhesPersonagem').hide();
 		limparDiv();
 	});
 
-	$('#detalhesFechar').click(function () {
-		favoritarPersonagem()
+	$('#detalhesFavoritar').click(function () {
+		favoritarPersonagem($('#personagemId').text());
 	});
 
 	$('#pesquisa').click(function () {
@@ -65,10 +64,6 @@ $(function () {
 				construirDivDetalhes(result.data.results[0]);
 				$('.detalhesPersonagem .loadingSvg').hide();
 			},
-			error: function (error) {
-				console.log(id);
-				console.log(`Error: ${JSON.stringify(error)}`);
-			},
 		});
 	}
 
@@ -84,9 +79,6 @@ $(function () {
 					addLI('pesquisaPersonagens', results[i]);
 				}
 				$('#loadingSvg').hide();
-			},
-			error: function (error) {
-				console.log(`Error: ${error}`);
 			},
 		});
 	}
@@ -113,9 +105,6 @@ $(function () {
 				offset += 20;
 				$('#loadingSvg').hide();
 			},
-			error: function (error) {
-				console.log(`Error: ${error}`);
-			},
 		});
 	}
 
@@ -136,6 +125,8 @@ $(function () {
 					/>`)
 		);
 		$('#h1NomePersonagem').text(personagem.name);
+		$('#personagemId').text(personagem.id);
+		$('#personagemId').hide();
 		let series = personagem.series.items;
 		let seriesCount = personagem.series.available;
 		let comics = personagem.comics.items;
@@ -184,6 +175,16 @@ $(function () {
 			} else {
 				logado = true;
 			}
+		});
+	}
+
+	function favoritarPersonagem(id) {
+		var email = localStorage.getItem('email');
+		$.ajax({
+			url: `http://localhost:3000/favorities`,
+			type: 'POST',
+			dataType: 'JSON',
+			data: { hero_id: id, email: email },
 		});
 	}
 });
