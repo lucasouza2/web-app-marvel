@@ -58,6 +58,7 @@ $(function () {
 			} else {
 				logado = true;
 				user = result['responseJSON'];
+				$('#perfil').hide();
 				$('.detalhesPersonagem').hide();
 				loadFavoritiesCharacters();
 			}

@@ -81,7 +81,7 @@ nav a:hover {
 
 .todosPersonagens {
 	display: flex;
-	flex-wrap: wrap;
+	align-items: center;
 	justify-content: center;
 }
 
